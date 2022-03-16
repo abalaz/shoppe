@@ -1,0 +1,102 @@
+:root{ 
+    --white-color :#fff;
+    --black-color: #000;
+    --text-color: #333;
+    --header-height:  120px;
+    --navbar-height: 36px;
+    --header-with-search-height : calc(var(--header-height) -var(--navbar-height));
+    --header-sort-bar-height : 50px;
+}
+ 
+*{
+    box-sizing: inherit;
+} 
+
+html{
+    font-size:62.5%;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    /* margin-right: -12px; */
+}
+
+.grid__col-2{
+    padding-left: 12px;
+    /* padding-right: 12px; */
+    width : 16.6667%;
+}
+
+.grid__col-2-4{
+    padding-left: 12px;
+    width : 20%;
+}
+.grid__col-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width : 83.3334%;
+}
+.grid__col-12{
+    width: 100%;
+}
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(0.5)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+/* MODAL */
+.modal-login-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 15, 15, 0.5);
+    display : flex
+}
+.modal-login{
+    width: 400px;
+    height:480px;
+    background-color: #fff;
+    margin: auto;
+}
+@media (min-width: 740px) and (max-width:1023px){
+    .wide{
+        width: 640px
+    }
+}
+@media (min-width: 1024px) and (max-width:1239px){
+    .wide{
+        width: 984px
+    }
+}
